@@ -1,0 +1,47 @@
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 300px 100px;
+    grid-template-areas: 
+    "s s s m m m m m m m m m"
+    "s s s m m m m m m m m m"
+    "s s s m m m m m m m m m"
+    "s s s m m m m m m m m m"
+    ;
+    gap: 1px;
+}
+
+// mobile
+@media only screen and (max-width: 480px) {
+    .grid-container{
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 100px 300px 100px;
+        grid-template-areas: 
+        "s s s s s s s s s s s s"
+        "s s s s s s s s s s s s"
+        "m m m m m m m m m m m m"
+        "m m m m m m m m m m m m"
+        ;
+        gap: 1px;
+    }
+} 
+
+// tablet & mobile
+@media only screen and (min-width: 481px) {} 
+
+// tablet & laptop
+@media only screen and (min-width: 769px) {} 
+
+// computer
+@media only screen and (min-width: 1280px) {}
+
+.main{
+    grid-area: m;
+    background-color: red;
+}
+
+.sidebar{
+    grid-area: s;
+    background-color: green;
+}

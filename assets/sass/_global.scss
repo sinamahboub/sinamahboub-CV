@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "FilSon";
+  src: url("./../fonts/FilsonProRegular.otf") format("otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl !important;
+  }
+  
+body {
+    min-height: 100vh;
+    font-family: "FilSon" !important;
+}
+
+.center-container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+

@@ -1,1 +1,52 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "FilSon";
+  src: url("./../fonts/FilsonProRegular.otf") format("otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl !important;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "FilSon" !important;
+}
+
+.center-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 100px 300px 100px;
+  grid-template-areas: "s s s m m m m m m m m m" "s s s m m m m m m m m m" "s s s m m m m m m m m m" "s s s m m m m m m m m m";
+  gap: 1px;
+}
+
+@media only screen and (max-width: 480px) {
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 100px 300px 100px;
+    grid-template-areas: "s s s s s s s s s s s s" "s s s s s s s s s s s s" "m m m m m m m m m m m m" "m m m m m m m m m m m m";
+    gap: 1px;
+  }
+}
+
+.main {
+  grid-area: m;
+  background-color: red;
+}
+
+.sidebar {
+  grid-area: s;
+  background-color: green;
+}
+/*# sourceMappingURL=style.css.map */
